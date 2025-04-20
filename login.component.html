@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow p-4 rounded">
+        <h2 class="text-center mb-4">Login</h2>
+        <form #loginForm="ngForm" (ngSubmit)="onLogin()">
+
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" id="username" class="form-control" name="username" [(ngModel)]="username" required placeholder="Enter your Username" />
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-control" name="password"  [(ngModel)]="password" required placeholder="Enter your Password"/>
+          </div>
+
+          <button type="submit" class="submit-btn" [disabled]="!loginForm.valid"> LogIn Form </button>
+
+          <div *ngIf="error" class="text-danger mt-3 text-center"> {{ error }}</div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

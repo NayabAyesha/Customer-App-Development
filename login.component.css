@@ -1,0 +1,39 @@
+.card {
+  border: none;
+  background-color: rgb(38, 46, 70);
+  color: white;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.form-control {
+  border: 1px solid #17191b;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.submit-btn {
+  background-color: white;
+  border-color: rgb(38, 46, 70);
+  cursor: pointer;
+  width: 100%;
+  color: black;
+  padding: 0.5rem 0.75rem;
+}
+
+.submit-btn:hover {
+  background-color: rgb(38, 46, 70);
+  border-color: white;
+}
+
+.text-danger {
+  margin-top: 1rem;
+  text-align: center;
+}
