@@ -1,0 +1,43 @@
+<div class="customer-list-container">
+  <h2 class="list-title">Customer List</h2>
+
+  <button class="add-customer-button" routerLink="add">Add Customer Data</button>
+  <button class="logout-button" (click)="logout()">LogOut Here</button>
+
+  <input type="text" [(ngModel)]="searchQuery" placeholder="Search..." class="search-input">
+
+
+  <table class="customer-table">
+    <thead>
+      <tr>
+        <th class="table-header">Customer Code</th>
+        <th class="table-header">Customer Name</th>
+        <th class="table-header">Customer Phone</th>
+        <th class="table-header">Customer Email</th>
+        <th class="table-header">Customer Credit Days</th>
+        <th class="table-header">Customer Credit Amount</th>
+        <th class="table-header">Customer Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of pagedCustomers" class="table-row">
+        <td class="table-cell">{{ customer.code }}</td>
+        <td class="table-cell">{{ customer.name }}</td>
+        <td class="table-cell">{{ customer.phone }}</td>
+        <td class="table-cell">{{ customer.email }}</td>
+        <td class="table-cell">{{ customer.creditDays }}</td>
+        <td class="table-cell">{{ customer.creditAmount }}</td>
+        <td class="table-cell">
+          <button class="edit-button" [routerLink]="['edit', customer.code]">Edit</button>
+          <button class="delete-button" (click)="deleteCustomer(customer)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination-container">
+    <button class="pagination-button" (click)="currentPage = currentPage > 1 ? currentPage - 1 : 1">Previous</button>
+    <span class="page-info">Page {{ currentPage }} of {{ totalPages }}</span>
+    <button class="pagination-button" (click)="currentPage = currentPage < totalPages ? currentPage + 1 : totalPages">Next</button>
+  </div>
+</div>

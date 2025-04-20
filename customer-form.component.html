@@ -1,0 +1,59 @@
+
+<div class="customer-container">
+
+  <h2 class="formTitle">{{ isEditMode ? 'Edit Customer' : 'Add Customer' }}</h2>
+
+  <form (ngSubmit)="saveCustomer()" class="customer-form">
+
+    <div class="group">
+
+      <label for="code" class="Label">Code</label>
+      <input type="text" id="code" name="code" [(ngModel)]="customer.code" required class="input">
+
+    </div>
+
+
+    <div class="group">
+
+      <label for="name" class="Label">Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="customer.name" required class="input">
+
+    </div>
+
+
+    <div class="group">
+
+
+      <label for="phone" class="Label">Phone</label>
+      <input type="text" id="phone" name="phone" [(ngModel)]="customer.phone" class="input">
+
+    </div>
+
+    <div class="group">
+
+      <label for="email" class="Label">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="customer.email" class="input">
+
+
+    </div>
+
+
+    <div class="group">
+      <label for="creditDays" class="Label">Credit Days</label>
+      <input type="number" id="creditDays" name="creditDays" [(ngModel)]="customer.creditDays" class="input">
+
+
+    </div>
+
+
+    <div class="group">
+
+      <label for="creditAmount" class="Label">Credit Amount</label>
+      <input type="number" id="creditAmount" name="creditAmount" [(ngModel)]="customer.creditAmount" class="input">
+    </div>
+
+    <button type="submit" class="Form-Button">{{ isEditMode ? 'Update' : 'Save' }}</button>
+
+    <button type="button" routerLink="/customers" class="cancel-Button">Cancel</button>
+  </form>
+</div>

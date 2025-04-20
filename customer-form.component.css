@@ -1,0 +1,63 @@
+.customer-container {
+  background-color: rgb(38, 46, 70);
+  color: white;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.formTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.customer-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  margin-bottom: 15px;
+}
+
+.Label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.Form-Button {
+  background-color: rgb(38, 46, 70);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.Form-Button:hover{
+  background-color: white;
+  border: solid rgb(38, 46, 70);
+  color: black;
+
+}
+.cancel-Button {
+  background-color: rgb(38, 46, 70);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.cancel-Button:hover{
+background-color: white;
+border: solid rgb(38, 46, 70);
+color: black;
+}
